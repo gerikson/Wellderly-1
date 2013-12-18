@@ -1,0 +1,13 @@
+Evaluate Big Data tools that fit this project's clustered database needs (Vertica, Postgres-XC, Impala, etc.)
+Evaluate other Big Data Tools that might work well to speed up analytics and querying (Hadoop, Solr, etc.)
+Install database on development platform consisting of two VM nodes
+Configure database for security and cluster configuration (id all nodes on the cluster)
+Create Staging Schema in the database with object that will contain raw uploads (SG Advisor and VCF)
+Download SG Advisor and VCF files for the Wellderly project from STSI (either dropbox or SFTP)
+Test modified PyVCF module for parsing and uploading to Staging
+Design the appropriate data model for providing the output from the queries involved in milestone 1.
+Create database objects supporting the data model (tables, materialized views, indexes, primary keys, foreign keys, etc.)
+Create database processes to extract, transform and load (ETL) data from Staging to the Analytics and Reporting schemas
+Acquire semantic data for use in the Wellderly project and store these data in a table which maps column names to semantic titles.
+Beyond the data available in our local database, we will need to augment this data from external resources such as the UCSC Browser. Build interfaces to these repositories via API calls.
+Design queries and functions to deliver datasets for queries in milestone 1. This may involve Hadoop, MapReduce and Solr if theses technologies are appropriate for this exercise.
