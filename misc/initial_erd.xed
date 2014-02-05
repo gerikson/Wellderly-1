@@ -1,0 +1,1838 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram version="1.0" type="VERTICA" versionMajor="7" versionMinor="0" groupSchema="false" hide_inv="false">
+<Table id="0" name="demographics" schema="staging" database="wellderly" background="16777165">
+<Column id="1" name="patient_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="2" name="sample_type" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+<Column id="3" name="eligibility" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">2</CP>
+</Column>
+<Column id="4" name="elig_comm" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">3</CP>
+</Column>
+<Column id="5" name="enroll_dt" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">4</CP>
+</Column>
+<Column id="6" name="gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">5</CP>
+</Column>
+<Column id="7" name="birth_dt" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">6</CP>
+</Column>
+<Column id="8" name="height_ft" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">7</CP>
+</Column>
+<Column id="9" name="height_in" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">8</CP>
+</Column>
+<Column id="10" name="height_cm" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">9</CP>
+</Column>
+<Column id="11" name="weight_lbs" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">10</CP>
+</Column>
+<Column id="12" name="weight_kg" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">11</CP>
+</Column>
+<Column id="13" name="race___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">12</CP>
+</Column>
+<Column id="14" name="race___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">13</CP>
+</Column>
+<Column id="15" name="race___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">14</CP>
+</Column>
+<Column id="16" name="race___5" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">15</CP>
+</Column>
+<Column id="17" name="race___6" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">16</CP>
+</Column>
+<Column id="18" name="race___7" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">17</CP>
+</Column>
+<Column id="19" name="race___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">18</CP>
+</Column>
+<Column id="20" name="hisp_ethnicity" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">19</CP>
+</Column>
+<Column id="21" name="other_race_ethn" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">20</CP>
+</Column>
+<Column id="22" name="origin_mat_grmother" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">21</CP>
+</Column>
+<Column id="23" name="origin_mat_grfather" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">22</CP>
+</Column>
+<Column id="24" name="origin_pat_grmother" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">23</CP>
+</Column>
+<Column id="25" name="origin_pat_grfather" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">24</CP>
+</Column>
+<Column id="26" name="mother_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">25</CP>
+</Column>
+<Column id="27" name="mother_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">26</CP>
+</Column>
+<Column id="28" name="mother_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">27</CP>
+</Column>
+<Column id="29" name="father_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">28</CP>
+</Column>
+<Column id="30" name="father_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">29</CP>
+</Column>
+<Column id="31" name="father_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">30</CP>
+</Column>
+<Column id="32" name="have_siblings" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">31</CP>
+</Column>
+<Column id="33" name="sib1_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">32</CP>
+</Column>
+<Column id="34" name="sib1_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">33</CP>
+</Column>
+<Column id="35" name="sib1_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">34</CP>
+</Column>
+<Column id="36" name="sib1_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">35</CP>
+</Column>
+<Column id="37" name="sib2_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">36</CP>
+</Column>
+<Column id="38" name="sib2_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">37</CP>
+</Column>
+<Column id="39" name="sib2_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">38</CP>
+</Column>
+<Column id="40" name="sib2_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">39</CP>
+</Column>
+<Column id="41" name="sib3_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">40</CP>
+</Column>
+<Column id="42" name="sib3_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">41</CP>
+</Column>
+<Column id="43" name="sib3_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">42</CP>
+</Column>
+<Column id="44" name="sib3_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">43</CP>
+</Column>
+<Column id="45" name="sib4_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">44</CP>
+</Column>
+<Column id="46" name="sib4_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">45</CP>
+</Column>
+<Column id="47" name="sib4_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">46</CP>
+</Column>
+<Column id="48" name="sib4_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">47</CP>
+</Column>
+<Column id="49" name="sib5_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">48</CP>
+</Column>
+<Column id="50" name="sib5_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">49</CP>
+</Column>
+<Column id="51" name="sib5_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">50</CP>
+</Column>
+<Column id="52" name="sib5_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">51</CP>
+</Column>
+<Column id="53" name="sib6_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">52</CP>
+</Column>
+<Column id="54" name="sib6_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">53</CP>
+</Column>
+<Column id="55" name="sib6_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">54</CP>
+</Column>
+<Column id="56" name="sib6_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">55</CP>
+</Column>
+<Column id="57" name="sib7_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">56</CP>
+</Column>
+<Column id="58" name="sib7_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">57</CP>
+</Column>
+<Column id="59" name="sib7_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">58</CP>
+</Column>
+<Column id="60" name="sib7_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">59</CP>
+</Column>
+<Column id="61" name="sib8_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">60</CP>
+</Column>
+<Column id="62" name="sib8_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">61</CP>
+</Column>
+<Column id="63" name="sib8_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">62</CP>
+</Column>
+<Column id="64" name="sib8_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">63</CP>
+</Column>
+<Column id="65" name="sib9_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">64</CP>
+</Column>
+<Column id="66" name="sib9_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">65</CP>
+</Column>
+<Column id="67" name="sib9_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">66</CP>
+</Column>
+<Column id="68" name="sib9_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">67</CP>
+</Column>
+<Column id="69" name="sib10_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">68</CP>
+</Column>
+<Column id="70" name="sib10_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">69</CP>
+</Column>
+<Column id="71" name="sib10_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">70</CP>
+</Column>
+<Column id="72" name="sib10_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">71</CP>
+</Column>
+<Column id="73" name="sib11_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">72</CP>
+</Column>
+<Column id="74" name="sib11_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">73</CP>
+</Column>
+<Column id="75" name="sib11_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">74</CP>
+</Column>
+<Column id="76" name="sib11_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">75</CP>
+</Column>
+<Column id="77" name="sib12_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">76</CP>
+</Column>
+<Column id="78" name="sib12_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">77</CP>
+</Column>
+<Column id="79" name="sib12_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">78</CP>
+</Column>
+<Column id="80" name="sib12_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">79</CP>
+</Column>
+<Column id="81" name="sib13_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">80</CP>
+</Column>
+<Column id="82" name="sib13_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">81</CP>
+</Column>
+<Column id="83" name="sib13_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">82</CP>
+</Column>
+<Column id="84" name="sib13_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">83</CP>
+</Column>
+<Column id="85" name="sib14_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">84</CP>
+</Column>
+<Column id="86" name="sib14_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">85</CP>
+</Column>
+<Column id="87" name="sib14_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">86</CP>
+</Column>
+<Column id="88" name="sib14_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">87</CP>
+</Column>
+<Column id="89" name="sib15_gender" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">88</CP>
+</Column>
+<Column id="90" name="sib15_age_alive" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">89</CP>
+</Column>
+<Column id="91" name="sib15_age_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">90</CP>
+</Column>
+<Column id="92" name="sib15_cause_death" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">91</CP>
+</Column>
+<Column id="93" name="smoking_hist" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">92</CP>
+</Column>
+<Column id="94" name="curr_pk_yrs" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">93</CP>
+</Column>
+<Column id="95" name="former_pk_yrs" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">94</CP>
+</Column>
+<Column id="96" name="curr_alcohol" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">95</CP>
+</Column>
+<Column id="97" name="drinks_wk" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">96</CP>
+</Column>
+<Column id="98" name="exercise_3x" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">97</CP>
+</Column>
+<Column id="99" name="highest_educ" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">98</CP>
+</Column>
+<Column id="100" name="reqs_assist" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">99</CP>
+</Column>
+<Column id="101" name="assistance___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">100</CP>
+</Column>
+<Column id="102" name="assistance___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">101</CP>
+</Column>
+<Column id="103" name="assistance___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">102</CP>
+</Column>
+<Column id="104" name="assistance___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">103</CP>
+</Column>
+<Column id="105" name="assistance___5" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">104</CP>
+</Column>
+<Column id="106" name="take_meds" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">105</CP>
+</Column>
+<Column id="107" name="depr_anx" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">106</CP>
+</Column>
+<Column id="108" name="depr_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">107</CP>
+</Column>
+<Column id="109" name="depr_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">108</CP>
+</Column>
+<Column id="110" name="depr_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">109</CP>
+</Column>
+<Column id="111" name="depr_meds___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">110</CP>
+</Column>
+<Column id="112" name="osteopor" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">111</CP>
+</Column>
+<Column id="113" name="osteopor_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">112</CP>
+</Column>
+<Column id="114" name="osteopor_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">113</CP>
+</Column>
+<Column id="115" name="osteopor_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">114</CP>
+</Column>
+<Column id="116" name="hrt" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">115</CP>
+</Column>
+<Column id="117" name="hrt_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">116</CP>
+</Column>
+<Column id="118" name="hrt_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">117</CP>
+</Column>
+<Column id="119" name="hrt_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">118</CP>
+</Column>
+<Column id="120" name="hrt_meds___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">119</CP>
+</Column>
+<Column id="121" name="hrt_meds___5" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">120</CP>
+</Column>
+<Column id="122" name="gerd" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">121</CP>
+</Column>
+<Column id="123" name="gerd_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">122</CP>
+</Column>
+<Column id="124" name="gerd_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">123</CP>
+</Column>
+<Column id="125" name="gerd_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">124</CP>
+</Column>
+<Column id="126" name="gerd_meds___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">125</CP>
+</Column>
+<Column id="127" name="bph" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">126</CP>
+</Column>
+<Column id="128" name="bph_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">127</CP>
+</Column>
+<Column id="129" name="bph_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">128</CP>
+</Column>
+<Column id="130" name="bph_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">129</CP>
+</Column>
+<Column id="131" name="bph_meds___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">130</CP>
+</Column>
+<Column id="132" name="osteoarth" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">131</CP>
+</Column>
+<Column id="133" name="osteoarth_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">132</CP>
+</Column>
+<Column id="134" name="osteoarth_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">133</CP>
+</Column>
+<Column id="135" name="osteoarth_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">134</CP>
+</Column>
+<Column id="136" name="osteoarth_meds___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">135</CP>
+</Column>
+<Column id="137" name="hypothy" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">136</CP>
+</Column>
+<Column id="138" name="hypothy_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">137</CP>
+</Column>
+<Column id="139" name="hypothy_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">138</CP>
+</Column>
+<Column id="140" name="hypothy_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">139</CP>
+</Column>
+<Column id="141" name="hyperten" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">140</CP>
+</Column>
+<Column id="142" name="hyperten_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">141</CP>
+</Column>
+<Column id="143" name="hyperten_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">142</CP>
+</Column>
+<Column id="144" name="hyperten_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">143</CP>
+</Column>
+<Column id="145" name="hyperten_meds___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">144</CP>
+</Column>
+<Column id="146" name="hyperten_meds___5" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">145</CP>
+</Column>
+<Column id="147" name="hyperten_meds___6" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">146</CP>
+</Column>
+<Column id="148" name="hyperten_meds___7" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">147</CP>
+</Column>
+<Column id="149" name="hyperten_meds___8" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">148</CP>
+</Column>
+<Column id="150" name="dyslipid" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">149</CP>
+</Column>
+<Column id="151" name="dyslipid_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">150</CP>
+</Column>
+<Column id="152" name="dyslipid_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">151</CP>
+</Column>
+<Column id="153" name="dyslipid_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">152</CP>
+</Column>
+<Column id="154" name="dyslipid_meds___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">153</CP>
+</Column>
+<Column id="155" name="dyslipid_meds___5" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">154</CP>
+</Column>
+<Column id="156" name="blad_con" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">155</CP>
+</Column>
+<Column id="157" name="blad_con_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">156</CP>
+</Column>
+<Column id="158" name="blad_con_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">157</CP>
+</Column>
+<Column id="159" name="blad_con_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">158</CP>
+</Column>
+<Column id="160" name="copd_asthma" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">159</CP>
+</Column>
+<Column id="161" name="copd_ast_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">160</CP>
+</Column>
+<Column id="162" name="copd_ast_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">161</CP>
+</Column>
+<Column id="163" name="copd_ast_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">162</CP>
+</Column>
+<Column id="164" name="copd_ast_meds___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">163</CP>
+</Column>
+<Column id="165" name="glaucoma" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">164</CP>
+</Column>
+<Column id="166" name="glaucoma_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">165</CP>
+</Column>
+<Column id="167" name="glaucoma_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">166</CP>
+</Column>
+<Column id="168" name="glaucoma_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">167</CP>
+</Column>
+<Column id="169" name="glaucoma_meds___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">168</CP>
+</Column>
+<Column id="170" name="macular_degen" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">169</CP>
+</Column>
+<Column id="171" name="mac_degen_meds___1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">170</CP>
+</Column>
+<Column id="172" name="mac_degen_meds___2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">171</CP>
+</Column>
+<Column id="173" name="mac_degen_meds___3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">172</CP>
+</Column>
+<Column id="174" name="mac_degen_meds___4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">173</CP>
+</Column>
+<Column id="175" name="mac_degen_meds___5" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">174</CP>
+</Column>
+<Column id="176" name="mac_degen_other_descr" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">175</CP>
+</Column>
+<Column id="177" name="oth_med_cond_comment" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">176</CP>
+</Column>
+<Column id="178" name="med_hist_comment" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">177</CP>
+</Column>
+<Column id="179" name="last_hist_phys" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">178</CP>
+</Column>
+<Column id="180" name="gene_bk_related" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">179</CP>
+</Column>
+<Column id="181" name="gene_bk_rel1" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">180</CP>
+</Column>
+<Column id="182" name="gene_bk_rel1_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">181</CP>
+</Column>
+<Column id="183" name="gene_bk_rel2" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">182</CP>
+</Column>
+<Column id="184" name="gene_bk_rel2_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">183</CP>
+</Column>
+<Column id="185" name="gene_bk_rel3" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">184</CP>
+</Column>
+<Column id="186" name="gene_bk_rel3_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">185</CP>
+</Column>
+<Column id="187" name="gene_bk_rel4" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">186</CP>
+</Column>
+<Column id="188" name="gene_bk_rel4_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">187</CP>
+</Column>
+</Table>
+<Table id="189" name="sg_advisor" schema="gene" database="wellderly" background="16777165">
+<Column id="190" name="haplotype" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="191" name="chromosome" type="varchar" length="25" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+<Column id="192" name="begin_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">2</CP>
+</Column>
+<Column id="193" name="end_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">3</CP>
+</Column>
+<Column id="194" name="vartype" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">4</CP>
+</Column>
+<Column id="195" name="reference" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">5</CP>
+</Column>
+<Column id="196" name="allele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">6</CP>
+</Column>
+<Column id="197" name="variant_quality" type="varchar" length="20" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">7</CP>
+</Column>
+<Column id="198" name="notes" type="varchar" length="100" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">8</CP>
+</Column>
+<Column id="199" name="gene" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">9</CP>
+</Column>
+<Column id="200" name="gene_type" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">10</CP>
+</Column>
+<Column id="201" name="location" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">11</CP>
+</Column>
+<Column id="202" name="distance" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">12</CP>
+</Column>
+<Column id="203" name="coding_impact" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">13</CP>
+</Column>
+<Column id="204" name="protein_pos" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">14</CP>
+</Column>
+<Column id="205" name="original_aa" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">15</CP>
+</Column>
+<Column id="206" name="allele_aa" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">16</CP>
+</Column>
+<Column id="207" name="start_stop_dist" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">17</CP>
+</Column>
+<Column id="208" name="prop_cons_affected_upstream" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">18</CP>
+</Column>
+<Column id="209" name="prop_cons_affected_downstream" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">19</CP>
+</Column>
+<Column id="210" name="trunc_prediction" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">20</CP>
+</Column>
+<Column id="211" name="conserved46way" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">21</CP>
+</Column>
+<Column id="212" name="conserved46wayplacental" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">22</CP>
+</Column>
+<Column id="213" name="conserved46wayprimates" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">23</CP>
+</Column>
+<Column id="214" name="asw_minallele" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">24</CP>
+</Column>
+<Column id="215" name="ceu_minallele" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">25</CP>
+</Column>
+<Column id="216" name="chb_minallele" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">26</CP>
+</Column>
+<Column id="217" name="chd_minallele" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">27</CP>
+</Column>
+<Column id="218" name="gih_minallele" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">28</CP>
+</Column>
+<Column id="219" name="jpt_minallele" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">29</CP>
+</Column>
+<Column id="220" name="lwk_minallele" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">30</CP>
+</Column>
+<Column id="221" name="mex_minallele" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">31</CP>
+</Column>
+<Column id="222" name="mkk_minallele" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">32</CP>
+</Column>
+<Column id="223" name="tsi_minallele" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">33</CP>
+</Column>
+<Column id="224" name="yri_minallele" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">34</CP>
+</Column>
+<Column id="225" name="genomes_af" type="float" length="0" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">35</CP>
+</Column>
+<Column id="226" name="wellderly_af325" type="float" length="0" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">36</CP>
+</Column>
+<Column id="227" name="nhlbi" type="float" length="0" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">37</CP>
+</Column>
+<Column id="228" name="eqtl_genes" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">38</CP>
+</Column>
+<Column id="229" name="mirna_bs_influenced" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">39</CP>
+</Column>
+<Column id="230" name="mirna_bs_impact" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">40</CP>
+</Column>
+<Column id="231" name="mirna_bs_direct" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">41</CP>
+</Column>
+<Column id="232" name="mirna_bs_deltag" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">42</CP>
+</Column>
+<Column id="233" name="mirna_genomic" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">43</CP>
+</Column>
+<Column id="234" name="mirna_folding_deltag" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">44</CP>
+</Column>
+<Column id="235" name="mirna_binding_deltag" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">45</CP>
+</Column>
+<Column id="236" name="mirna_top_targets_changed" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">46</CP>
+</Column>
+<Column id="237" name="splice_site_pred" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">47</CP>
+</Column>
+<Column id="238" name="splicing_predictionmaxent" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">48</CP>
+</Column>
+<Column id="239" name="ese_sites" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">49</CP>
+</Column>
+<Column id="240" name="ess_sites" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">50</CP>
+</Column>
+<Column id="241" name="protein_impact_predictionpolyphen" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">51</CP>
+</Column>
+<Column id="242" name="protein_impact_probabilitypolyphen" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">52</CP>
+</Column>
+<Column id="243" name="protein_impact_predictionsift" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">53</CP>
+</Column>
+<Column id="244" name="protein_impact_scoresift" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">54</CP>
+</Column>
+<Column id="245" name="protein_domains" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">55</CP>
+</Column>
+<Column id="246" name="protein_domains_impactlogre" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">56</CP>
+</Column>
+<Column id="247" name="protein_impact_predictioncondel" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">57</CP>
+</Column>
+<Column id="248" name="protein_impact_probabilitycondel" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">58</CP>
+</Column>
+<Column id="249" name="tf_binding_sites" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">59</CP>
+</Column>
+<Column id="250" name="tfbs_deltas" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">60</CP>
+</Column>
+<Column id="251" name="omimgene_id_omimgene_association" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">61</CP>
+</Column>
+<Column id="252" name="protein_domain_gene_ontology" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">62</CP>
+</Column>
+<Column id="253" name="dbsnp_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">63</CP>
+</Column>
+<Column id="254" name="hgmd_variant_pubmedid" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">64</CP>
+</Column>
+<Column id="255" name="hgmd_gene_disease_association" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">65</CP>
+</Column>
+<Column id="256" name="genetic_association_database_pubmedid" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">66</CP>
+</Column>
+<Column id="257" name="pharmgkb_database_drug" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">67</CP>
+</Column>
+<Column id="258" name="inheritance_penetrance" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">68</CP>
+</Column>
+<Column id="259" name="severity_treatability" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">69</CP>
+</Column>
+<Column id="260" name="cosmic_variant_numsamples" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">70</CP>
+</Column>
+<Column id="261" name="cosmic_gene_numsamples" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">71</CP>
+</Column>
+<Column id="262" name="mskcc_cancergenes" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">72</CP>
+</Column>
+<Column id="263" name="atlas_oncology" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">73</CP>
+</Column>
+<Column id="264" name="sanger_cancergenes" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">74</CP>
+</Column>
+<Column id="265" name="sanger_germline_cancergenes" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">75</CP>
+</Column>
+<Column id="266" name="sanger_network_informed_cancergenes_pval" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">76</CP>
+</Column>
+<Column id="267" name="segdup_region" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">77</CP>
+</Column>
+<Column id="268" name="gene_symbol" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">78</CP>
+</Column>
+<Column id="269" name="drugbank" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">79</CP>
+</Column>
+<Column id="270" name="reactome_pathway" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">80</CP>
+</Column>
+<Column id="271" name="gene_onotology" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">81</CP>
+</Column>
+<Column id="272" name="disease_ontology" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">82</CP>
+</Column>
+<Column id="273" name="acmg_score_clinical_disease_entry_explanation" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">83</CP>
+</Column>
+<Column id="274" name="acmg_score_research_disease_entry_explanation" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">84</CP>
+</Column>
+<Column id="275" name="patient_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">85</CP>
+</Column>
+<Column id="276" name="load_date" type="date" length="0" nulls="false">
+<CP name="DEFAULT_VALUE">"sysdate"()</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">86</CP>
+</Column>
+<Column id="277" name="load_process" type="varchar" length="25" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">87</CP>
+</Column>
+</Table>
+<Table id="278" name="sg_advisor" schema="staging" database="wellderly" background="16777165">
+<Column id="279" name="haplotype" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="280" name="chromosome" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+<Column id="281" name="begin_pos" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">2</CP>
+</Column>
+<Column id="282" name="end_pos" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">3</CP>
+</Column>
+<Column id="283" name="vartype" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">4</CP>
+</Column>
+<Column id="284" name="reference" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">5</CP>
+</Column>
+<Column id="285" name="allele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">6</CP>
+</Column>
+<Column id="286" name="notes" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">7</CP>
+</Column>
+<Column id="287" name="gene" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">8</CP>
+</Column>
+<Column id="288" name="gene_type" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">9</CP>
+</Column>
+<Column id="289" name="location" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">10</CP>
+</Column>
+<Column id="290" name="distance" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">11</CP>
+</Column>
+<Column id="291" name="coding_impact" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">12</CP>
+</Column>
+<Column id="292" name="protein_pos" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">13</CP>
+</Column>
+<Column id="293" name="original_aa" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">14</CP>
+</Column>
+<Column id="294" name="allele_aa" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">15</CP>
+</Column>
+<Column id="295" name="start_stop_dist" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">16</CP>
+</Column>
+<Column id="296" name="prop_cons_affected_upstream" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">17</CP>
+</Column>
+<Column id="297" name="prop_cons_affected_downstream" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">18</CP>
+</Column>
+<Column id="298" name="trunc_prediction" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">19</CP>
+</Column>
+<Column id="299" name="conserved46way" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">20</CP>
+</Column>
+<Column id="300" name="conserved46wayplacental" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">21</CP>
+</Column>
+<Column id="301" name="conserved46wayprimates" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">22</CP>
+</Column>
+<Column id="302" name="asw_minallele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">23</CP>
+</Column>
+<Column id="303" name="ceu_minallele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">24</CP>
+</Column>
+<Column id="304" name="chb_minallele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">25</CP>
+</Column>
+<Column id="305" name="chd_minallele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">26</CP>
+</Column>
+<Column id="306" name="gih_minallele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">27</CP>
+</Column>
+<Column id="307" name="jpt_minallele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">28</CP>
+</Column>
+<Column id="308" name="lwk_minallele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">29</CP>
+</Column>
+<Column id="309" name="mex_minallele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">30</CP>
+</Column>
+<Column id="310" name="mkk_minallele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">31</CP>
+</Column>
+<Column id="311" name="tsi_minallele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">32</CP>
+</Column>
+<Column id="312" name="yri_minallele" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">33</CP>
+</Column>
+<Column id="313" name="genomes_af" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">34</CP>
+</Column>
+<Column id="314" name="wellderly_af325" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">35</CP>
+</Column>
+<Column id="315" name="nhlbi" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">36</CP>
+</Column>
+<Column id="316" name="eqtl_genes" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">37</CP>
+</Column>
+<Column id="317" name="mirna_bs_influenced" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">38</CP>
+</Column>
+<Column id="318" name="mirna_bs_impact" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">39</CP>
+</Column>
+<Column id="319" name="mirna_bs_direct" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">40</CP>
+</Column>
+<Column id="320" name="mirna_bs_deltag" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">41</CP>
+</Column>
+<Column id="321" name="mirna_genomic" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">42</CP>
+</Column>
+<Column id="322" name="mirna_folding_deltag" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">43</CP>
+</Column>
+<Column id="323" name="mirna_binding_deltag" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">44</CP>
+</Column>
+<Column id="324" name="mirna_top_targets_changed" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">45</CP>
+</Column>
+<Column id="325" name="splice_site_pred" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">46</CP>
+</Column>
+<Column id="326" name="splicing_predictionmaxent" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">47</CP>
+</Column>
+<Column id="327" name="ese_sites" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">48</CP>
+</Column>
+<Column id="328" name="ess_sites" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">49</CP>
+</Column>
+<Column id="329" name="protein_impact_predictionpolyphen" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">50</CP>
+</Column>
+<Column id="330" name="protein_impact_probabilitypolyphen" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">51</CP>
+</Column>
+<Column id="331" name="protein_impact_predictionsift" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">52</CP>
+</Column>
+<Column id="332" name="protein_impact_scoresift" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">53</CP>
+</Column>
+<Column id="333" name="protein_domains" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">54</CP>
+</Column>
+<Column id="334" name="protein_domains_impactlogre" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">55</CP>
+</Column>
+<Column id="335" name="protein_impact_predictioncondel" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">56</CP>
+</Column>
+<Column id="336" name="protein_impact_probabilitycondel" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">57</CP>
+</Column>
+<Column id="337" name="tf_binding_sites" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">58</CP>
+</Column>
+<Column id="338" name="tfbs_deltas" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">59</CP>
+</Column>
+<Column id="339" name="omimgene_id_omimgene_association" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">60</CP>
+</Column>
+<Column id="340" name="protein_domain_gene_ontology" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">61</CP>
+</Column>
+<Column id="341" name="dbsnp_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">62</CP>
+</Column>
+<Column id="342" name="hgmd_variant_pubmedid" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">63</CP>
+</Column>
+<Column id="343" name="hgmd_gene_disease_association" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">64</CP>
+</Column>
+<Column id="344" name="genetic_association_database_pubmedid" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">65</CP>
+</Column>
+<Column id="345" name="pharmgkb_database_drug" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">66</CP>
+</Column>
+<Column id="346" name="inheritance_penetrance" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">67</CP>
+</Column>
+<Column id="347" name="severity_treatability" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">68</CP>
+</Column>
+<Column id="348" name="cosmic_variant_numsamples" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">69</CP>
+</Column>
+<Column id="349" name="cosmic_gene_numsamples" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">70</CP>
+</Column>
+<Column id="350" name="mskcc_cancergenes" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">71</CP>
+</Column>
+<Column id="351" name="atlas_oncology" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">72</CP>
+</Column>
+<Column id="352" name="sanger_cancergenes" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">73</CP>
+</Column>
+<Column id="353" name="sanger_germline_cancergenes" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">74</CP>
+</Column>
+<Column id="354" name="sanger_network_informed_cancergenes_pval" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">75</CP>
+</Column>
+<Column id="355" name="segdup_region" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">76</CP>
+</Column>
+<Column id="356" name="gene_symbol" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">77</CP>
+</Column>
+<Column id="357" name="drugbank" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">78</CP>
+</Column>
+<Column id="358" name="reactome_pathway" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">79</CP>
+</Column>
+<Column id="359" name="gene_onotology" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">80</CP>
+</Column>
+<Column id="360" name="disease_ontology" type="varchar" length="80" nulls="true">
+<CP name="DEFAULT_VALUE">'NA'</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">81</CP>
+</Column>
+<Column id="361" name="acmg_score_clinical_disease_entry_explanation" type="varchar" length="80" nulls="true">
+<CP name="DEFAULT_VALUE">'NA'</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">82</CP>
+</Column>
+<Column id="362" name="acmg_score_research_disease_entry_explanation" type="varchar" length="80" nulls="true">
+<CP name="DEFAULT_VALUE">'NA'</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">83</CP>
+</Column>
+<Column id="363" name="patient_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+</Table>
+<Sheet name="Welldery" id="364" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true">
+<Place id="189" visible="true">10,10,400,1520</Place>
+<Place id="278" visible="true">450,10,400,1470</Place>
+<Place id="0" visible="true">890,10,260,3220</Place>
+</Sheet>
+<Settings sheet="364" zoom="0.5946035575013612"/>
+</Diagram>
