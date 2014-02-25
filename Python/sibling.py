@@ -2,7 +2,7 @@ from well_conn import well_conn
 
 class sibling(object):
     
-    def get_sibling(self):
+    def get_sibling(self, patient_id):
         conn_obj = well_conn()
         conn = conn_obj.db_conn()
         cur = conn.cursor()
@@ -14,7 +14,7 @@ class sibling(object):
                     "sib6_gender, sib1_age_alive, sib1_age_death, sib6_cause_death, " +
                     "sib7_gender, sib1_age_alive, sib7_age_death, sib7_cause_death, " + 
                     "sib8_gender, sib8_age_alive, sib8_age_death, sib8_cause_death " +
-                    " FROM staging.demographics")
+                    " FROM staging.demographics where patient_id = '" + patient_id + "'")
         return cur
 
     def insert_sibling(self, sql):
@@ -52,12 +52,14 @@ class sibling(object):
                             sibling_age_alive = str(record[element+ 1]) if record[element+ 1] != None else 'null'
                             sibling_age_death = str(record[element+2]) if record[element+2] != None else 'null'
                             sibling_cause_death = str(record[element+3]) if record[element+3] != None else 'null'
-                        sql = sql + "Insert into gene.subject_siblings (patient_id, sib_ordinal, sib_gender, sib_age_alive, sib_age_death, sib_cause_death, load_date, load_process) values( '"+ str(patient_id) + "', " + sibling_ordinal + ", " + sibling_gender + ", " + sibling_age_alive + ", " + sibling_age_death + ", " + sibling_cause_death + ", sysdate, 'ETL Process')" +"\n"
+                        sql = sql + "Insert into gene.subject_siblings (patient_id, sib_ordinal, sib_gender, sib_age_alive, sib_age_death, sib_cause_death, load_date, load_process) values( '"+ str(patient_id) + "', " + sibling_ordinal + ", " + sibling_gender + ", " + sibling_age_alive + ", " + sibling_age_death + ", '" + sibling_cause_death + "', sysdate, 'ETL Process')" +"\n"
 
             sibling.insert_sibling(self, sql)
             print(sql)
                     
-
+sib_obj = sibling()
+result = sib_obj.get_sibling('HE00659')        
+trans_data = sib_obj.tranform_sibling(result)   
 
 
 
