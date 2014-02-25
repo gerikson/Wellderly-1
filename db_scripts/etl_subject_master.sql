@@ -1,3 +1,5 @@
+/* tables related to the demographc data*/
+
 DROP
 	TABLE gene.subject_master CASCADE; 
 CREATE
@@ -8,7 +10,7 @@ CREATE
 	,
 	sample_type INT,
 	eligibility INT,
-	elig_comm INT,
+	elig_comm VARCHAR,
 	enroll_dt DATE,
 	gender INT,
 	birth_dt DATE,
@@ -18,7 +20,7 @@ CREATE
 	weight_lbs INT,
 	weight_kg INT,
 	hisp_ethnicity INT,
-	other_race_ethn INT,
+	other_race_ethn VARCHAR,
 	origin_mat_grmother VARCHAR
 	(
 		80
@@ -54,11 +56,11 @@ CREATE
 	)
 	,
 	have_siblings BOOLEAN,
-	smoking_hist BOOLEAN,
+	smoking_hist INT,
 	curr_pk_yrs INT,
 	former_pk_yrs INT,
 	curr_alcohol BOOLEAN,
-	drinks_wk INT,
+	drinks_wk VARCHAR,
 	exercise_3x BOOLEAN,
 	highest_educ INT,
 	reqs_assist BOOLEAN,
@@ -98,6 +100,7 @@ CREATE
 		15
 	)
 	); 
+	
 INSERT
 INTO
 	gene.subject_master(patient_id,
@@ -157,7 +160,7 @@ SELECT
 	patient_id,
 	CAST(sample_type AS NUMERIC),
 	CAST(eligibility AS NUMERIC),
-	CAST(elig_comm AS NUMERIC),
+	elig_comm,
 	CAST(enroll_dt AS DATE),
 	CAST(gender AS NUMERIC),
 	CAST(birth_dt AS DATE),
@@ -167,7 +170,7 @@ SELECT
 	CAST(weight_lbs AS NUMERIC),
 	CAST(weight_kg AS NUMERIC),
 	CAST(hisp_ethnicity AS NUMERIC),
-	CAST(other_race_ethn AS NUMERIC),
+	other_race_ethn,
 	origin_mat_grmother,
 	origin_mat_grfather,
 	origin_pat_grmother,
@@ -179,11 +182,11 @@ SELECT
 	CAST(father_age_death AS NUMERIC),
 	father_cause_death,
 	CAST(have_siblings AS BOOLEAN),
-	CAST(smoking_hist AS BOOLEAN),
+	CAST(smoking_hist AS NUMERIC),
 	CAST(curr_pk_yrs AS NUMERIC),
 	CAST(former_pk_yrs AS NUMERIC),
 	CAST(curr_alcohol AS BOOLEAN),
-	CAST(drinks_wk AS NUMERIC),
+	drinks_wk,
 	CAST(exercise_3x AS BOOLEAN),
 	CAST(highest_educ AS NUMERIC),
 	CAST(reqs_assist AS BOOLEAN),
@@ -327,7 +330,3 @@ CREATE SEQUENCE "ontology_seq"
 	START WITH 1
 	NO CYCLE
 
-
-select * from gene.sg_advisor limit 10;
-
-select split_partb(split_partb(split_partb(notes, ':', 3), '-', 3), '",', 1) from staging.sg_advisor limit 10
