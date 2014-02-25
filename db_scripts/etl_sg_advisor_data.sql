@@ -32,7 +32,8 @@ acmg_score_clinical_disease_entry_explanation Varchar(80),
 acmg_score_research_disease_entry_explanation Varchar(80), 
 patient_id Varchar(80),
 load_date	date not null default sysdate,
-load_process	varchar(25)	);
+load_process	varchar(25),
+go_id varchar(40)	);
 
 
 
@@ -123,7 +124,8 @@ acmg_score_clinical_disease_entry_explanation,
 acmg_score_research_disease_entry_explanation,
 patient_id,
 load_date,
-load_process)
+load_process,
+go_id)
 
 select 
 case when haplotype = 'N/A'
@@ -249,6 +251,7 @@ acmg_score_clinical_disease_entry_explanation,
 acmg_score_research_disease_entry_explanation,
 patient_id,
 sysdate,
-'ETL Process'
+'ETL Process',
+regexp_substr(gene_onotology, 'GO:\d+') 
 from staging.sg_advisor;
 
