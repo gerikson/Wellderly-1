@@ -2,7 +2,7 @@ from well_conn import well_conn
 
 class meds(object):
     
-    def get_meds(self): 
+    def get_meds(self, patient_id): 
         conn_obj = well_conn()
         conn = conn_obj.db_conn()
         cur = conn.cursor()
@@ -32,7 +32,7 @@ class meds(object):
                     "'glaucoma_meds___3',glaucoma_meds___3,'glaucoma_meds___4',glaucoma_meds___4,'mac_degen_meds___1',"+
                     "mac_degen_meds___1,'mac_degen_meds___2',mac_degen_meds___2,'mac_degen_meds___3',mac_degen_meds___3,"+
                     "'mac_degen_meds___4',mac_degen_meds___4"+
-                    " from staging.demographics")
+                    " from staging.demographics where patient_id = '" + patient_id + "'")
         
         return cur
     
@@ -56,6 +56,6 @@ class meds(object):
                     meds.insert_meds(self, sql)
             
 meds_obj = meds()
-result = meds_obj.get_meds()        
+result = meds_obj.get_meds('NA12877')        
 trans_data = meds_obj.tranform_meds(result, 'NA12877')   
                     
