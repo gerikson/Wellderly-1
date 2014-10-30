@@ -6,7 +6,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "gene.illumina_vcf")
-public class VCFData {
+public class VCFComplexData {
 
 	private String subjectID;
 	private String ref;
@@ -17,19 +17,22 @@ public class VCFData {
 	private String allele1;
 	private String allele2;
 	private String altList1;
-	private String modAlt;
-	private String modRef;
-	private int modStartPos;
+	private String altList2;
+	private String modAlt1;
+	private String modAlt2;
+	private String modRef1;
+	private String modRef2;
 	private int modStartPos1;
-	private int modEndPos;
-	private int modEndPos1;
-	private String vartype;
-	private String modAltList;
+	private int modStartPos2;
+	private String vartype1;
+	private String vartype2;
+	
 	
 
-	public VCFData() {
+	public VCFComplexData() {
 
 	}
+
 
 	public String getRef() {
 		return ref;
@@ -107,34 +110,53 @@ public class VCFData {
 		this.subjectID = subjectID;
 	}
 
-
-	public String getModAlt() {
-		return modAlt;
+	public String getAltList2() {
+		return altList2;
 	}
 
 
-	public void setModAlt(String modAlt) {
-		this.modAlt = modAlt;
+	public void setAltList2(String altList2) {
+		this.altList2 = altList2;
 	}
 
 
-	public String getModRef() {
-		return modRef;
+	public String getModAlt1() {
+		return modAlt1;
 	}
 
 
-	public void setModRef(String modRef) {
-		this.modRef = modRef;
+	public void setModAlt1(String modAlt1) {
+		this.modAlt1 = modAlt1;
 	}
 
 
-	public int getModStartPos() {
-		return modStartPos;
+	public String getModAlt2() {
+		return modAlt2;
 	}
 
 
-	public void setModStartPos(int modStartPos) {
-		this.modStartPos = modStartPos;
+	public void setModAlt2(String modAlt2) {
+		this.modAlt2 = modAlt2;
+	}
+
+
+	public String getModRef1() {
+		return modRef1;
+	}
+
+
+	public void setModRef1(String modRef1) {
+		this.modRef1 = modRef1;
+	}
+
+
+	public String getModRef2() {
+		return modRef2;
+	}
+
+
+	public void setModRef2(String modRef2) {
+		this.modRef2 = modRef2;
 	}
 
 
@@ -142,41 +164,39 @@ public class VCFData {
 		return modStartPos1;
 	}
 
+
 	public void setModStartPos1(int modStartPos1) {
 		this.modStartPos1 = modStartPos1;
 	}
 
-	public int getModEndPos() {
-		return modEndPos;
-	}
 
-	public void setModEndPos(int modEndPos) {
-		this.modEndPos = modEndPos;
-	}
-
-	public int getModEndPos1() {
-		return modEndPos1;
-	}
-
-	public void setModEndPos1(int modEndPos1) {
-		this.modEndPos1 = modEndPos1;
-	}
-
-	public String getModAltList() {
-		return modAltList;
-	}
-
-	public void setModAltList(String modAltList) {
-		this.modAltList = modAltList;
-	}
-
-	public String getVartype() {
-		return vartype;
+	public int getModStartPos2() {
+		return modStartPos2;
 	}
 
 
-	public void setVartype(String vartype) {
-		this.vartype = vartype;
+	public void setModStartPos2(int modStartPos2) {
+		this.modStartPos2 = modStartPos2;
+	}
+
+
+	public String getVartype1() {
+		return vartype1;
+	}
+
+
+	public void setVartype1(String vartype1) {
+		this.vartype1 = vartype1;
+	}
+
+
+	public String getVartype2() {
+		return vartype2;
+	}
+
+
+	public void setVartype2(String vartype2) {
+		this.vartype2 = vartype2;
 	}
 
 }

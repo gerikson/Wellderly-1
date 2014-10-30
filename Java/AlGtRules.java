@@ -10,28 +10,28 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
 import edu.sdsc.wellderly.rules.LengthFirstComparator;
 
-public class AlGtSimpleRules {
+public class AlGtRules {
 	
 	
-	static final Set<String> alts1 = new HashSet<String>();
-	static final Set<String> modAlts = new HashSet<String>();
+	static final Set<String> alts1 = new TreeSet<String>();
+	static final Set<String> modAlts = new TreeSet<String>();
 
-	public AlGtSimpleRules() {
+	public AlGtRules() {
 		super();
 	}
 
 	public static void main(String args[]) {
 		try {
-			//getData();
-			AlGtComplexRules vcfComp = new AlGtComplexRules();
-			vcfComp.getComplexData();
+			getData();
+			//AlGtComplexRules vcfComp = new AlGtComplexRules();
+			//vcfComp.getComplexData();
 		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -49,10 +49,27 @@ public class AlGtSimpleRules {
 		}
 		//ignore offset and limit. For testing only. They will be removed when in production.
 		String query = "select chrom, pos, ref, alt, mod_start_pos, mod_ref, mod_alt, split_part(file, ':', 1) as GT, subject_id, vartype "
-				+ "from gene.illumina_vcf where " 
-				+ "alt not like '%,%'  or (alt like '%,%' and length(split_part(alt,',', 1)) = 1 "
-				+ "and length(split_part(alt,',', 2)) = 1) "
-				+ "order by 1, 2, 4 " + " limit 500";
+				+ "from gene.illumina_vcf where chrom = 'chr2' " 
+				+ "and alt not like '%,%' and vartype = 'del' or (alt like '%,%' and length(split_part(alt,',', 1)) = 1 "
+				+ "and length(split_part(alt,',', 2)) = 1 and vartype = 'del' and chrom = 'chr22') "
+				+ "Union "
+				+ "select chrom, pos, ref, alt, mod_start_pos, mod_ref, mod_alt, split_part(file, ':', 1) as GT, subject_id, vartype,  mod_end_pos "
+				+ "from gene.illumina_vcf where chrom = 'chr2' " 
+				+ "union "
+				+ "select subject_id, chrom, pos, ref, split_part(alt, ',', 1) as allele1, "
+				+ "split_part(alt, ',', 2) as allele2, "
+				+ "TypeRules(ref,split_part(alt, ',', 1)) as vartype1, "
+				+ "TypeRules(ref,split_part(alt, ',', 2)) as vartype2, "
+				+ "ReferenceRules(TypeRules(ref,split_part(alt, ',', 1)), ref, split_part(alt, ',', 1)) as mod_ref1, "
+				+ "ReferenceRules(TypeRules(ref,split_part(alt, ',', 2)), ref, split_part(alt, ',', 2)) as mod_ref2, "
+				+ "AltRules(TypeRules(ref,split_part(alt, ',', 1)), ref, split_part(alt, ',', 1)) as mod_alt1, "
+				+ "AltRules(TypeRules(ref,split_part(alt, ',', 2)), ref, split_part(alt, ',', 2)) as mod_alt2, "
+				+ "PosRules(upper(TypeRules(ref,split_part(alt, ',', 1))), ref, split_part(alt, ',', 1)) + pos as pos_alt1, "
+				+ "PosRules(upper(TypeRules(ref,split_part(alt, ',', 2))), ref, split_part(alt, ',', 2)) + pos as pos_alt2, "
+				+ "split_part(file, ':', 1) as GT "
+				+ "from gene.illumina_vcf where  alt like '%,%' and pos = 3097725 "
+				+ "and length(split_part(alt,',', 1)) > 1 or length(split_part(alt,',', 2)) > 1 "
+				+ "order by 1, 2, 3, 5, 6 " + "limit 500";
 		
 		try {
 
@@ -282,7 +299,7 @@ public class AlGtSimpleRules {
 		String altList1 = altList.replace("[", "");
 		String altList2 = altList1.replace("]", "");
 		String genoType1 = "";
-		String[] altElement;
+		java.lang.String[] altElement;
 		String[] genoType = gt.split("");
 
 		Collections.sort(Arrays.asList(altList2), new LengthFirstComparator());

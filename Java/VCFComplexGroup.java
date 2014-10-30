@@ -2,10 +2,11 @@ package edu.sdsc.wellderly.rules;
 
 import java.io.Serializable;
 
+
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class VCFGroup implements Serializable {
+public class VCFComplexGroup implements Serializable {
 
 	/**
 	 * 
@@ -16,10 +17,12 @@ public class VCFGroup implements Serializable {
 	private String alt;
 	private String gt;
 	private String altList1;
-	private String modAltList;
+	private String altList2;
 
-	public VCFGroup() {
 
+
+	public VCFComplexGroup() {
+	
 	}
 
 	public String getChrom() {
@@ -54,12 +57,13 @@ public class VCFGroup implements Serializable {
 		this.altList1 = altList1;
 	}
 
-	public String getModAltList() {
-		return modAltList;
+
+	public String getAltList2() {
+		return altList2;
 	}
 
-	public void setModAltList(String modAltList) {
-		this.modAltList = modAltList;
+	public void setAltList2(String altList2) {
+		this.altList2 = altList2;
 	}
 
 	public String getGt() {
@@ -81,5 +85,4 @@ public class VCFGroup implements Serializable {
 		return false;
 
 	}
-
 }
