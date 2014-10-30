@@ -1,144 +1,165 @@
---all patients, all variants
+--ALL PATIENTS, ALL VARIANTS
 
 SELECT
-	d.patient_id,
-	gender,
-	birth_dt,
-	height_ft,
-	height_in,
-	weight_lbs,
-	haplotype,
-	chromosome,
-	begin_pos,
-	end_pos,
-	vartype,
-	reference,
-	allele,
-	notes,
-	variant_quality,
-	gene,
-	gene_symbol,
-	gene_type,
-	location,
-	distance,
-	genomes_af,
-	wellderly_af325,
-	nhlbi tfbs_deltas 
+	D.PATIENT_ID,
+	GENDER,
+	BIRTH_DT,
+	HEIGHT_FT,
+	HEIGHT_IN,
+	WEIGHT_LBS,
+	HAPLOTYPE,
+	CHROMOSOME,
+	BEGIN_POS,
+	END_POS,
+	VARTYPE,
+	REFERENCE,
+	ALLELE,
+	NOTES,
+	VARIANT_QUALITY,
+	GENE,
+	GENE_SYMBOL,
+	GENE_TYPE,
+	LOCATION,
+	DISTANCE,
+	GENOMES_AF,
+	WELLDERLY_AF325,
+	NHLBI TFBS_DELTAS 
 FROM
-	gene.sg_advisor sg,
-	staging.demographics d 
+	GENE.SG_ADVISOR SG,
+	STAGING.DEMOGRAPHICS D 
 WHERE
-	d.patient_id = sg.patient_id AND
-	patient_id = ?
-
---all patients with allele frequencies <= .01
+	D.PATIENT_ID = SG.PATIENT_ID AND
+	PATIENT_ID = ?
+	--ALL PATIENTS WITH ALLELE FREQUENCIES <= .01
 SELECT
-	d.patient_id,
-	gender,
-	birth_dt,
-	height_ft,
-	height_in,
-	weight_lbs,
-	haplotype,
-	chromosome,
-	begin_pos,
-	end_pos,
-	vartype,
-	reference,
-	allele,
-	notes,
-	variant_quality,
-	gene,
-	gene_symbol,
-	gene_type,
-	location,
-	distance,
-	genomes_af,
-	wellderly_af325,
-	nhlbi 
+	D.PATIENT_ID,
+	GENDER,
+	BIRTH_DT,
+	HEIGHT_FT,
+	HEIGHT_IN,
+	WEIGHT_LBS,
+	HAPLOTYPE,
+	CHROMOSOME,
+	BEGIN_POS,
+	END_POS,
+	VARTYPE,
+	REFERENCE,
+	ALLELE,
+	NOTES,
+	VARIANT_QUALITY,
+	GENE,
+	GENE_SYMBOL,
+	GENE_TYPE,
+	LOCATION,
+	DISTANCE,
+	GENOMES_AF,
+	WELLDERLY_AF325,
+	NHLBI 
 FROM
-	gene.sg_advisor sg,
-	staging.demographics d 
+	GENE.SG_ADVISOR SG,
+	STAGING.DEMOGRAPHICS D 
 WHERE
-	d.patient_id = sg.patient_id AND
-	wellderly_af325 <= .01 AND
-	genomes_af <= .01 AND
-    nhlbi <= .01
-ORDER BY patient_id, chromosome, begin_pos; 
-
-
---all patients with allele frequencies <= .01 and high variant quality
-SELECT
-	d.patient_id,
-	gender,
-	birth_dt,
-	height_ft,
-	height_in,
-	weight_lbs,
-	haplotype,
-	chromosome,
-	begin_pos,
-	end_pos,
-	vartype,
-	reference,
-	allele,
-	notes,
-	variant_quality,
-	gene,
-	gene_symbol,
-	gene_type,
-	location,
-	distance,
-	genomes_af,
-	wellderly_af325,
-	nhlbi 
-FROM
-	gene.sg_advisor sg,
-	staging.demographics d 
-WHERE
-	d.patient_id = sg.patient_id AND
-	wellderly_af325 <= .01 AND
-	genomes_af <= .01 AND
-    nhlbi <= .01 AND
-	variant_quality = 'VQHIGH'
-ORDER BY patient_id, chromosome, begin_pos; 
-
--- all allele with a given GO_ID
-SELECT
-	patient_id,
-	go_id,
-	gene,
-	chromosome,
-	allele,
-	reference,
-	begin_pos,
-	end_pos,
-	variant_quality,
-	genomes_af,
-	wellderly_af325,
-    nhlib
-FROM
-	gene.sg_advisor 
-WHERE
-	genomes_af <= ? AND
-	variant_quality = ? 
+	D.PATIENT_ID = SG.PATIENT_ID AND
+	WELLDERLY_AF325 <= .01 AND
+	GENOMES_AF <= .01 AND
+	NHLBI <= .01 
 ORDER BY
-	chromosome,
-	begin_pos,
-	end_pos 
+	PATIENT_ID,
+	CHROMOSOME,
+	BEGIN_POS;
+	--ALL PATIENTS WITH ALLELE FREQUENCIES <= .01 AND HIGH VARIANT QUALITY
 SELECT
-	patient_id,
-	go_id,
-	gene,
-	chromosome,
-	allele,
-	reference,
-	begin_pos,
-	end_pos,
-	genomes_af,
-	wellderly_af325 
+	D.PATIENT_ID,
+	GENDER,
+	BIRTH_DT,
+	HEIGHT_FT,
+	HEIGHT_IN,
+	WEIGHT_LBS,
+	HAPLOTYPE,
+	CHROMOSOME,
+	BEGIN_POS,
+	END_POS,
+	VARTYPE,
+	REFERENCE,
+	ALLELE,
+	NOTES,
+	VARIANT_QUALITY,
+	GENE,
+	GENE_SYMBOL,
+	GENE_TYPE,
+	LOCATION,
+	DISTANCE,
+	GENOMES_AF,
+	WELLDERLY_AF325,
+	NHLBI 
 FROM
-	gene.sg_advisor 
+	GENE.SG_ADVISOR SG,
+	STAGING.DEMOGRAPHICS D 
 WHERE
-	go_id IN(?)
-ORDER BY patient_id, chromosome, begin_pos; 
+	D.PATIENT_ID = SG.PATIENT_ID AND
+	WELLDERLY_AF325 <= .01 AND
+	GENOMES_AF <= .01 AND
+	NHLBI <= .01 AND
+	VARIANT_QUALITY = 'VQHIGH' 
+ORDER BY
+	PATIENT_ID,
+	CHROMOSOME,
+	BEGIN_POS;
+	-- ALL ALLELE WITH A GIVEN GO_ID
+SELECT
+	PATIENT_ID,
+	GO_ID,
+	GENE,
+	CHROMOSOME,
+	ALLELE,
+	REFERENCE,
+	BEGIN_POS,
+	END_POS,
+	VARIANT_QUALITY,
+	GENOMES_AF,
+	WELLDERLY_AF325,
+	NHLIB 
+FROM
+	GENE.SG_ADVISOR 
+WHERE
+	GENOMES_AF <= ? AND
+	VARIANT_QUALITY = ? 
+ORDER BY
+	CHROMOSOME,
+	BEGIN_POS,
+	END_POS 
+SELECT
+	PATIENT_ID,
+	GO_ID,
+	GENE,
+	CHROMOSOME,
+	ALLELE,
+	REFERENCE,
+	BEGIN_POS,
+	END_POS,
+	GENOMES_AF,
+	WELLDERLY_AF325 
+FROM
+	GENE.SG_ADVISOR 
+WHERE
+	GO_ID IN(?) 
+ORDER BY
+	PATIENT_ID,
+	CHROMOSOME,
+	BEGIN_POS; 
+SELECT
+	* 
+FROM
+	GENE.VARIANT_QUALITY VQ,
+	GENE.COVERAGE C 
+WHERE
+	VQ.PATIENT_ID = C.PATIENT_ID AND
+	VQ.CHROMOSOME = C.CHROMOSOME AND
+	VQ.END_POS = C.OFFSET_COV AND
+	VQ.PATIENT_ID = 'HE00426'; 
+SELECT
+	* 
+FROM
+	PARTITIONS
+
+select count(*) from gene.coverage

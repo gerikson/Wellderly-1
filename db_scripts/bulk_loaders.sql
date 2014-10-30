@@ -111,4 +111,23 @@ FROM
 	
 copy staging.demographics from '/tmp/DATA_WHWELLDERLY_2013-09-24.CSV' delimiter ',' enclosed by '"' record terminator E'\r' rejected data '/tmp/rejected_data' exceptions '/tmp/exceptions' trailing nullcols direct;
 
+insert into gene.dbnsfp_variants(chrom, pos, ref, alt, aaref, aaalt, sift_score, 
+sift_converted_rankscore, sift_pred, polyphen_hdiv_score, polyphen_hdiv_rankscore, polyphen_hdiv_pred,
+polyphen_hvar_score, polyphen_hvar_rankscore, polyphen_hvar_pred,
+gerp_nr, gerp_rs, gerp_rankscore, date_loaded)
+select chrom, cast(pos as numeric), ref, alt, aaref, aaalt, sift_score /*cast(decode(sift_score, '.', null, sift_score) as numeric)*/, 
+cast(decode(sift_converted_rankscore, '.', null, sift_converted_rankscore) as numeric), sift_pred, 
+polyphen2_hdiv_score, 
+cast(decode(polyphen2_hdiv_rankscore, '.', null, Polyphen2_HDIV_rankscore) as numeric), 
+polyphen2_hdiv_pred,
+polyphen2_hvar_score, cast(decode(polyphen2_hvar_rankscore, '.', null, polyphen2_hvar_rankscore)  as numeric), polyphen2_hvar_pred,
+cast(decode(gerp_nr, '.', null, gerp_nr) as numeric), cast(decode(gerp_rs, '.', null, gerp_rs) as numeric), 
+cast(decode(gerp_rs_rankscore, '.', null, gerp_rs_rankscore) as numeric), now() from staging.dbnsfp_variants
+
+copy gene.dbsnp_vcf from 'mod_all.vcf' delimiter E'\t' enclosed by '"' record terminator E'\n' rejected 
+data '/tmp/rejected_data' exceptions '/tmp/exceptions' trailing nullcols direct;
+
+nohup python2.7 -c 'import clinvar_upload; clinvar_upload.main();' &
+
+
 

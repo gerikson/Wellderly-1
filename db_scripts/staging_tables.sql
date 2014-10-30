@@ -330,5 +330,304 @@ varQuality	character varying,
 hapLink	character varying,	
 xRef	character varying)
 
+create table staging.clinvar
+(vartype    varchar,
+varnotes    varchar);
+
+
+create table staging.dbsnp_vcf(
+chrom   varchar not null,
+pos integer not null,
+id varchar,
+ref varchar,
+alt varchar,
+qual varchar,
+filter varchar,
+info varchar);
+
+
+drop table staging.dbnsfp_variants
+
+create table staging.dbnsfp_variants(
+chrom varchar not null,
+pos varchar not null,
+ref	varchar,
+alt varchar,
+aaref varchar,	
+aaalt   varchar,	
+hg18_pos varchar,	
+genename varchar,
+Uniprot_acc	varchar,
+Uniprot_id	varchar,
+Uniprot_aapos	varchar,
+Interpro_domain	varchar,
+cds_strand	varchar,
+refcodon	varchar,
+SLR_test_statistic 	varchar,
+codonpos	varchar,
+fold_degenerate varchar,
+Ancestral_allele    varchar,	
+Ensembl_geneid	varchar,
+Ensembl_transcriptid	varchar,
+aapos	varchar,
+aapos_SIFT	varchar,
+aapos_FATHMM	varchar,
+SIFT_score	varchar,
+SIFT_converted_rankscore	varchar,
+SIFT_pred	varchar,
+Polyphen2_HDIV_score	varchar,
+Polyphen2_HDIV_rankscore	varchar,
+Polyphen2_HDIV_pred	varchar,
+Polyphen2_HVAR_score	varchar,
+Polyphen2_HVAR_rankscore	varchar,
+Polyphen2_HVAR_pred	varchar,
+LRT_score	varchar,
+LRT_converted_rankscore	varchar,
+LRT_pred	varchar,
+MutationTaster_score	varchar,
+MutationTaster_converted_rankscore	varchar,
+MutationTaster_pred	varchar,
+MutationAssessor_score	varchar,
+MutationAssessor_rankscore	varchar,
+MutationAssessor_pred	varchar,
+FATHMM_score	varchar,
+FATHMM_rankscore	varchar,
+FATHMM_pred	varchar,
+RadialSVM_score	varchar,
+RadialSVM_rankscore	varchar,
+RadialSVM_pred	varchar,
+LR_score    varchar,	
+LR_rankscore varchar,
+LR_pred	varchar,
+Reliability_index varchar,
+VEST3_score	varchar,
+VEST3_rankscore	varchar,
+CADD_raw	varchar,
+CADD_raw_rankscore	varchar,
+CADD_phred	varchar,
+GERP_NR	varchar,
+GERP_RS	varchar,
+GERP_RS_rankscore	varchar,
+phyloP46way_primate varchar,
+phyloP46way_primate_rankscore	varchar,
+phyloP46way_placental	varchar,
+phyloP46way_placental_rankscore	varchar,
+phyloP100way_vertebrate	varchar,
+phyloP100way_vertebrate_rankscore	varchar,
+phastCons46way_primate	varchar,
+phastCons46way_primate_rankscore	varchar,
+phastCons46way_placental	varchar,
+phastCons46way_placental_rankscore	varchar,
+phastCons100way_vertebrate	varchar,
+phastCons100way_vertebrate_rankscore	varchar,
+SiPhy_29way_pi	varchar,
+SiPhy_29way_logOdds	varchar,
+SiPhy_29way_logOdds_rankscore	varchar,
+LRT_Omega	varchar,
+UniSNP_ids	varchar,
+a1000Gp1_AC varchar,
+a1000Gp1_AF	varchar,
+a1000Gp1_AFR_AC	varchar,
+a1000Gp1_AFR_AF	varchar,
+a1000Gp1_EUR_AC	varchar,
+a1000Gp1_EUR_AF	varchar,
+a1000Gp1_AMR_AC	varchar,
+a1000Gp1_AMR_AF	varchar,
+a1000Gp1_ASN_AC	varchar,
+a1000Gp1_ASN_AF	varchar, 
+ESP6500_AA_AF	varchar,
+ESP6500_EA_AF   varchar);
+
+create table staging.dbNSFP_gene(
+Gene_name varchar,
+Ensembl_gene varchar,
+chr varchar,
+Gene_old_names varchar,
+Gene_other_names  varchar,
+Uniprot_acc varchar,
+Uniprot_id  varchar,
+Entrez_gene_id  varchar,
+CCDS_id varchar,
+Refseq_id   varchar,
+ucsc_id varchar,
+MIM_id  varchar,
+Gene_full_name  varchar,
+Pathway_Uniprot varchar,
+Pathway_ConsensusPathDB varchar,
+Function_description    varchar,
+Disease_description varchar,
+MIM_phenotype_id    varchar,
+MIM_disease varchar,
+Trait_association   varchar,
+GO_Slim_biological_process  varchar,
+GO_Slim_cellular_component  varchar,
+GO_Slim_molecular_function  varchar,
+Expression varchar,
+Expression_GNF  varchar,
+Interactions_IntAct varchar,
+Interactions_BioGRID    varchar,
+Interactions_ConsensusPathDB    varchar,
+P_HI    varchar,
+P_rec   varchar,
+Known_rec_info varchar,
+Essential_gene  varchar)
+
+drop table staging.illumina_vcf
+
+CREATE TABLE staging.illumina_vcf  ( 
+    subject_id  varchar(20),
+	chrom 	varchar(80) NOT NULL,
+	pos   	int NOT NULL,
+	id    	varchar(80),
+	ref   	varchar(80),
+	alt   	varchar(80),
+	qual  	varchar(8000),
+	filter	varchar(8000),
+	info  	varchar(8000), 
+    format  varchar(8000),
+    file    varchar(8000)
+	)
+GO
+
+drop table staging.one_k_genome_vcf
+
+CREATE TABLE staging.one_k_genome_vcf  ( 
+	chrom 	varchar(80) NOT NULL,
+	pos   	int NOT NULL,
+	id    	varchar(80),
+	ref   	varchar(80),
+	alt   	varchar(80),
+	qual  	varchar(8000),
+	filter	varchar(8000),
+	info  	varchar(8000)
+	)
+GO
+
+CREATE TABLE staging.exome_vcf  ( 
+	chrom 	varchar(80) NOT NULL,
+	pos   	int NOT NULL,
+	id    	varchar(80),
+	ref   	varchar(80),
+	alt   	varchar(80),
+	qual  	varchar(8000),
+	filter	varchar(8000),
+	info  	varchar(8000)
+	)
+GO
+
+create table staging.clinvar{ 
+release_type    varchar,
+release_date    date,
+clinvar_id      numeric,
+record_status   varchar,
+title   varchar,
+ref_assertion_id    numeric,
+ref_assertion_date_created   date,
+ref_assertion_date_updated  date,
+accession_id numeric, 
+accession_date_created  date,
+accesion_date_updated   date,
+review_status   varchar,
+description varchar,
+assertion_type  varchar,
+
+ReleaseSet {'Type': 'full', 'Dated': '2014-08-07'}
+ClinVarSet {'ID': '1738117'}
+RecordStatus {}
+Title {}
+ReferenceClinVarAssertion {'ID': '86824', 'DateCreated': '2012-08-13', 'DateLastUpdated': '2014-04-18'}
+ClinVarAccession {'Type': 'RCV', 'Version': '1', 'DateUpdated': '2014-04-19', 'Acc': 'RCV000029321'}
+RecordStatus {}
+ClinicalSignificance {'DateLastEvaluated': '2011-08-18'}
+ReviewStatus {}
+Description {}
+Assertion {'Type': 'variation to disease'}
+AttributeSet {}
+Attribute {'Type': 'ModeOfInheritance', 'integerValue': '483'}
+ObservedIn {}
+Sample {}
+Origin {}
+Species {'TaxonomyId': '9606'}
+AffectedStatus {}
+Method {}
+Purpose {}
+MethodType {}
+ObservedData {'ID': '1502787'}
+Attribute {'Type': 'VariantAlleles', 'integerValue': '1'}
+MeasureSet {'ID': '35673', 'Type': 'Variant'}
+Measure {'ID': '44338', 'Type': 'single nucleotide variant'}
+Name {}
+ElementValue {'Type': 'preferred name'}
+AttributeSet {}
+Attribute {'Type': 'HGVS, non-validated'}
+CytogeneticLocation {}
+MeasureRelationship {'Type': 'variant in gene'}
+Name {}
+ElementValue {'Type': 'Preferred'}
+Symbol {}
+ElementValue {'Type': 'Preferred'}
+SequenceLocation {'Assembly': 'GRCh37', 'Chr': '2', 'Accession': 'NC_000002.11', 'start': '73612885', 'stop': '73837045', 'Strand': '+'}
+SequenceLocation {'Assembly': 'GRCh38', 'Chr': '2', 'Accession': 'NC_000002.12', 'start': '73385757', 'stop': '73609918', 'Strand': '+'}
+XRef {'ID': '7840', 'DB': 'Gene'}
+XRef {'DB': 'OMIM', 'ID': '606844', 'Type': 'MIM'}
+Name {}
+ElementValue {'Type': 'preferred name'}
+TraitSet {'ID': '8589', 'Type': 'Disease'}
+Trait {'ID': '16502', 'Type': 'Disease'}
+Name {}
+ElementValue {'Type': 'Preferred'}
+XRef {'ID': 'Cardiomyopathy/1090', 'DB': 'Genetic Alliance'}
+XRef {'ID': 'HP:0001638', 'DB': 'Human Phenotype Ontology'}
+XRef {'ID': '85898001', 'DB': 'SNOMED CT'}
+Symbol {}
+ElementValue {'Type': 'Preferred'}
+AttributeSet {}
+Attribute {'Type': 'mode of inheritance'}
+XRef {'ID': 'GTR000500688', 'DB': 'Ambry Genetics'}
+XRef {'ID': 'C0878544', 'DB': 'MedGen'}
+ClinVarAssertion {'ID': '56117'}
+ClinVarSubmissionID {'title': 'ALMS1:c.11869+18G>A and Cardiomyopathy', 'submitter': 'LabCorp', 'localKey': 'ALMS1_11869+18G_A_111110'}
+ClinVarAccession {'Type': 'SCV', 'OrgID': '500026', 'Version': '1', 'DateUpdated': '2014-04-19', 'Acc': 'SCV000051967'}
+RecordStatus {}
+ClinicalSignificance {'DateLastEvaluated': '2011-08-18'}
+ReviewStatus {}
+Description {}
+CustomAssertionScore {'Value': '0', 'Type': 'QOD'}
+CustomAssertionScore {'Value': 'NA', 'Type': 'aFXN'}
+CustomAssertionScore {'Value': '0', 'Type': 'pFXN'}
+CustomAssertionScore {'Value': 'NA', 'Type': 'pbGP'}
+CustomAssertionScore {'Value': 'NA', 'Type': 'tbGP'}
+Assertion {'Type': 'variation to disease'}
+AttributeSet {}
+Attribute {'Type': 'ModeOfInheritance'}
+ObservedIn {}
+Sample {}
+Origin {}
+Tissue {}
+Species {'TaxonomyId': '9606'}
+AffectedStatus {}
+Method {}
+Purpose {}
+MethodType {}
+ObservedData {}
+Attribute {'Type': 'VariantAlleles'}
+MeasureSet {'Type': 'Variant'}
+Measure {'Type': 'single nucleotide variant'}
+AttributeSet {}
+Attribute {'Type': 'HGVS'}
+AttributeSet {}
+Attribute {'Type': 'Description'}
+MeasureRelationship {'Type': 'variant in gene'}
+Symbol {}
+ElementValue {'Type': 'Preferred'}
+TraitSet {'Type': 'Disease'}
+Trait {'Type': 'Disease'}
+Name {}
+ElementValue {'Type': 'Preferred'}
+Symbol {}
+ElementValue {'Type': 'Preferred'}
+
+from '/localdisk/exome_vcf/ESP6500SI-V2-SSA137.updatedProteinHgvs.chr6.snps_indels.vcf' 
+
 
 

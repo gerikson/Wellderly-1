@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram version="1.0" type="VERTICA" versionMajor="6" versionMinor="0" groupSchema="false" hide_inv="false">
+<Table id="0" name="ref_coverage" schema="gene" database="wellderly" background="16777165">
+<Column id="1" name="patient_id" type="varchar" length="80" nulls="false">
+<CP name="DEFAULT_VALUE">'NA'</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="2" name="chromosome" type="varchar" length="80" nulls="false">
+<CP name="DEFAULT_VALUE">'NA'</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="3" name="offset_cov" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="4" name="refScore" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="5" name="uniqueSequenceCoverage" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="6" name="weightSumSequenceCoverage" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="7" name="gcCorrectedCoverage" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="8" name="grossWeightSumSequenceCoverage" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="9" name="loaded_by" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="10" name="load_date" type="date" length="0" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+</Table>
+<Table id="11" name="variant_gene_notation_ref" schema="gene" database="wellderly" background="16777165">
+<Column id="12" name="patient_id" type="varchar" length="15" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="13" name="chromosome" type="varchar" length="10" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+<Column id="14" name="begin_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">2</CP>
+</Column>
+<Column id="15" name="end_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">3</CP>
+</Column>
+<Column id="16" name="ncbi_gene_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">4</CP>
+</Column>
+<Column id="17" name="refseq_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">5</CP>
+</Column>
+<Column id="18" name="hugo_gene_symbol" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">6</CP>
+</Column>
+<Column id="19" name="splice_site_type" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">7</CP>
+</Column>
+<Column id="20" name="mutation_site" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">8</CP>
+</Column>
+</Table>
+<Table id="21" name="variant_quality" schema="gene" database="wellderly" background="16777165">
+<Column id="22" name="patient_id" type="varchar" length="80" nulls="false">
+<CP name="DEFAULT_VALUE">'NA'</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="23" name="locus" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="24" name="ploidy" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="25" name="chromosome" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="26" name="begin_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="27" name="end_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="28" name="zygosity" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="29" name="varType" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="30" name="reference" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="31" name="allele1Seq" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="32" name="allele2Seq" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="33" name="allele1VarScoreVAF" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="34" name="allele2VarScoreVAF" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="35" name="allele1VarScoreEAF" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="36" name="allele2VarScoreEAF" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="37" name="allele1VarQuality" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="38" name="allele2VarQuality" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="39" name="allele1HapLink" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="40" name="allele2HapLink" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="41" name="allele1XRef" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="42" name="allele2XRef" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="43" name="evidenceIntervalId" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="44" name="allele1ReadCount" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="45" name="allele2ReadCount" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="46" name="referenceAlleleReadCount" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="47" name="totalReadCount" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="48" name="allele1Gene" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="49" name="allele2Gene" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="50" name="pfam" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="51" name="miRBaseId" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="52" name="repeatMasker" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="53" name="segDupOverlap" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="54" name="relativeCoverageDiploid" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="55" name="calledPloidy" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="56" name="relativeCoverageNondiploid" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="57" name="calledLevel" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="58" name="load_date" type="date" length="0" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+<Column id="59" name="load_process" type="varchar" length="80" nulls="true">
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">null</CP>
+</Column>
+</Table>
+<Sheet name="Untitled 1" id="60" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true"/>
+<Sheet name="Untitled 2" id="61" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true">
+<Place id="21" visible="true">10,10,280,670</Place>
+<Place id="11" visible="true">330,10,230,180</Place>
+<Place id="0" visible="true">600,10,260,190</Place>
+</Sheet>
+<Settings sheet="61" zoom="0.4856764705882353"/>
+</Diagram>

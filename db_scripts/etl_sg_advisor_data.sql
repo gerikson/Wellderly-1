@@ -35,8 +35,6 @@ load_date	date not null default sysdate,
 load_process	varchar(25),
 go_id varchar(40)	);
 
-
-
 insert /*+ direct */
 into wellderly.gene.sg_advisor(
 haplotype,

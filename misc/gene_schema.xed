@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram version="1.0" type="VERTICA" versionMajor="7" versionMinor="0" groupSchema="true" hide_inv="false">
+<Table id="0" name="depth_of_coverage" schema="gene" database="wellderly" background="16777165">
+<Column id="1" name="patient_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="2" name="chromosome" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+<Column id="3" name="begin_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">2</CP>
+</Column>
+<Column id="4" name="end_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">3</CP>
+</Column>
+<Column id="5" name="uniqueSequenceCoverage" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">4</CP>
+</Column>
+<Column id="6" name="weightSumSequenceCoverage" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">5</CP>
+</Column>
+<Column id="7" name="gcCorrectedCvg" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">6</CP>
+</Column>
+<Column id="8" name="avgNormalizedCoverage" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">7</CP>
+</Column>
+<Column id="9" name="loaded_by" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">8</CP>
+</Column>
+<Column id="10" name="load_date" type="date" length="0" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">9</CP>
+</Column>
+</Table>
+<Table id="11" name="did_subject_xref" schema="gene" database="wellderly" background="16777165">
+<Column id="12" name="did" type="varchar" length="32" nulls="false">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="13" name="subject_id" type="varchar" length="20" nulls="false">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+</Table>
+<Table id="14" name="diploid_beta_detail" schema="gene" database="wellderly" background="16777165">
+<Column id="15" name="patient_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="16" name="chr" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+<Column id="17" name="begin_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">2</CP>
+</Column>
+<Column id="18" name="end_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">3</CP>
+</Column>
+<Column id="19" name="avgNormalizedCvg" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">4</CP>
+</Column>
+<Column id="20" name="gcCorrectedCvg" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">5</CP>
+</Column>
+<Column id="21" name="fractionUnique" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">6</CP>
+</Column>
+<Column id="22" name="relativeCvg" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">7</CP>
+</Column>
+<Column id="23" name="calledPloidy" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">8</CP>
+</Column>
+<Column id="24" name="calledCNVType" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">9</CP>
+</Column>
+<Column id="25" name="ploidyScore" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">10</CP>
+</Column>
+<Column id="26" name="CNVTypeScore" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">11</CP>
+</Column>
+<Column id="27" name="loaded_by" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">12</CP>
+</Column>
+<Column id="28" name="load_date" type="date" length="0" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">13</CP>
+</Column>
+</Table>
+<Table id="29" name="nondiploid_beta_detail" schema="gene" database="wellderly" background="16777165">
+<Column id="30" name="patient_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="31" name="chr" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+<Column id="32" name="begin_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">2</CP>
+</Column>
+<Column id="33" name="end_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">3</CP>
+</Column>
+<Column id="34" name="avgNormalizedCvg" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">4</CP>
+</Column>
+<Column id="35" name="gcCorrectedCvg" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">5</CP>
+</Column>
+<Column id="36" name="fractionUnique" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">6</CP>
+</Column>
+<Column id="37" name="relativeCvg" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">7</CP>
+</Column>
+<Column id="38" name="calledLevel" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">8</CP>
+</Column>
+<Column id="39" name="calledCNVType" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">9</CP>
+</Column>
+<Column id="40" name="levelScore" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">10</CP>
+</Column>
+<Column id="41" name="CNVTypeScore" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">11</CP>
+</Column>
+<Column id="42" name="loaded_by" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">12</CP>
+</Column>
+<Column id="43" name="load_date" type="date" length="0" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">13</CP>
+</Column>
+</Table>
+<Table id="44" name="ref_coverage" schema="gene" database="wellderly" background="16777165">
+<Column id="45" name="patient_id" type="varchar" length="80" nulls="false">
+<CP name="DEFAULT_VALUE">'NA'</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="46" name="chromosome" type="varchar" length="80" nulls="false">
+<CP name="DEFAULT_VALUE">'NA'</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+<Column id="47" name="offset_cov" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">2</CP>
+</Column>
+<Column id="48" name="refScore" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">3</CP>
+</Column>
+<Column id="49" name="uniqueSequenceCoverage" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">4</CP>
+</Column>
+<Column id="50" name="weightSumSequenceCoverage" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">5</CP>
+</Column>
+<Column id="51" name="gcCorrectedCoverage" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">6</CP>
+</Column>
+<Column id="52" name="grossWeightSumSequenceCoverage" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">7</CP>
+</Column>
+<Column id="53" name="loaded_by" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">8</CP>
+</Column>
+<Column id="54" name="load_date" type="date" length="0" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">9</CP>
+</Column>
+</Table>
+<Table id="55" name="segments_diploid_beta" schema="gene" database="wellderly" background="16777165">
+<Column id="56" name="patient_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="57" name="chr" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+<Column id="58" name="begin_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">2</CP>
+</Column>
+<Column id="59" name="end_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">3</CP>
+</Column>
+<Column id="60" name="avgNormalizedCvg" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">4</CP>
+</Column>
+<Column id="61" name="relativeCvg" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">5</CP>
+</Column>
+<Column id="62" name="calledPloidy" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">6</CP>
+</Column>
+<Column id="63" name="calledCNVType" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">7</CP>
+</Column>
+<Column id="64" name="ploidyScore" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">8</CP>
+</Column>
+<Column id="65" name="CNVTypeScore" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">9</CP>
+</Column>
+<Column id="66" name="overlappingGene" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">10</CP>
+</Column>
+<Column id="67" name="knownCNV" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">11</CP>
+</Column>
+<Column id="68" name="repeats" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">12</CP>
+</Column>
+<Column id="69" name="loaded_by" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">13</CP>
+</Column>
+<Column id="70" name="load_date" type="date" length="0" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">14</CP>
+</Column>
+</Table>
+<Table id="71" name="segments_nondiploid_beta" schema="gene" database="wellderly" background="16777165">
+<Column id="72" name="patient_id" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="73" name="chr" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+<Column id="74" name="begin_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">2</CP>
+</Column>
+<Column id="75" name="end_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">3</CP>
+</Column>
+<Column id="76" name="avgNormalizedCvg" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">4</CP>
+</Column>
+<Column id="77" name="relativeCvg" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">5</CP>
+</Column>
+<Column id="78" name="calledLevel" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">6</CP>
+</Column>
+<Column id="79" name="calledCNVType" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">7</CP>
+</Column>
+<Column id="80" name="levelScore" type="numeric" length="0" nulls="true">
+<CP name="PRECISION">38</CP>
+<CP name="SCALE">0</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">8</CP>
+</Column>
+<Column id="81" name="CNVTypeScor" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">9</CP>
+</Column>
+<Column id="82" name="loaded_by" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">10</CP>
+</Column>
+<Column id="83" name="load_date" type="date" length="0" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">11</CP>
+</Column>
+</Table>
+<Table id="84" name="variant_quality" schema="gene" database="wellderly" background="16777165">
+<Column id="85" name="patient_id" type="varchar" length="80" nulls="false">
+<CP name="DEFAULT_VALUE">'NA'</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">0</CP>
+</Column>
+<Column id="86" name="locus" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">1</CP>
+</Column>
+<Column id="87" name="ploidy" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">2</CP>
+</Column>
+<Column id="88" name="chromosome" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">3</CP>
+</Column>
+<Column id="89" name="begin_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">4</CP>
+</Column>
+<Column id="90" name="end_pos" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">5</CP>
+</Column>
+<Column id="91" name="zygosity" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">6</CP>
+</Column>
+<Column id="92" name="varType" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">7</CP>
+</Column>
+<Column id="93" name="reference" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">8</CP>
+</Column>
+<Column id="94" name="allele1Seq" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">9</CP>
+</Column>
+<Column id="95" name="allele2Seq" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">10</CP>
+</Column>
+<Column id="96" name="allele1VarScoreVAF" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">11</CP>
+</Column>
+<Column id="97" name="allele2VarScoreVAF" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">12</CP>
+</Column>
+<Column id="98" name="allele1VarScoreEAF" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">13</CP>
+</Column>
+<Column id="99" name="allele2VarScoreEAF" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">14</CP>
+</Column>
+<Column id="100" name="allele1VarQuality" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">15</CP>
+</Column>
+<Column id="101" name="allele2VarQuality" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">16</CP>
+</Column>
+<Column id="102" name="allele1HapLink" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">17</CP>
+</Column>
+<Column id="103" name="allele2HapLink" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">18</CP>
+</Column>
+<Column id="104" name="allele1XRef" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">19</CP>
+</Column>
+<Column id="105" name="allele2XRef" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">20</CP>
+</Column>
+<Column id="106" name="evidenceIntervalId" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">21</CP>
+</Column>
+<Column id="107" name="allele1ReadCount" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">22</CP>
+</Column>
+<Column id="108" name="allele2ReadCount" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">23</CP>
+</Column>
+<Column id="109" name="referenceAlleleReadCount" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">24</CP>
+</Column>
+<Column id="110" name="totalReadCount" type="int" length="0" nulls="true">
+<CP name="IDENTITY">NO</CP>
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">25</CP>
+</Column>
+<Column id="111" name="allele1Gene" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">26</CP>
+</Column>
+<Column id="112" name="allele2Gene" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">27</CP>
+</Column>
+<Column id="113" name="pfam" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">28</CP>
+</Column>
+<Column id="114" name="miRBaseId" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">29</CP>
+</Column>
+<Column id="115" name="repeatMasker" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">30</CP>
+</Column>
+<Column id="116" name="segDupOverlap" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">31</CP>
+</Column>
+<Column id="117" name="relativeCoverageDiploid" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">32</CP>
+</Column>
+<Column id="118" name="calledPloidy" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">33</CP>
+</Column>
+<Column id="119" name="relativeCoverageNondiploid" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">34</CP>
+</Column>
+<Column id="120" name="calledLevel" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">35</CP>
+</Column>
+<Column id="121" name="load_date" type="date" length="0" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">36</CP>
+</Column>
+<Column id="122" name="load_process" type="varchar" length="80" nulls="true">
+<CP name="ENCODING">AUTO</CP>
+<CP name="ACCESS_RANK">0</CP>
+<CP name="SORT_KEY_ORDER">37</CP>
+</Column>
+</Table>
+<Sheet name="Wellderly-Prod" id="123" disp_at="true" disp_ph="true" disp_co="true" disp_rn="true">
+<Place id="71" visible="true">909,331,230,230</Place>
+<Place id="14" visible="true">649,329,230,260</Place>
+<Place id="44" visible="true">339,9,260,190</Place>
+<Place id="55" visible="true">639,9,230,280</Place>
+<Place id="29" visible="true">899,9,230,260</Place>
+<Place id="11" visible="true">341,240,180,60</Place>
+<Place id="84" visible="true">9,10,280,670</Place>
+<Place id="0" visible="true">330,330,290,190</Place>
+</Sheet>
+<Settings sheet="123" zoom="1.0"/>
+</Diagram>
