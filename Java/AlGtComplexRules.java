@@ -189,7 +189,12 @@ public class AlGtComplexRules extends AlGtSimpleRules {
 
 		}
         
-		String query = "select subject_id, chrom, pos, ref, alt, split_part(file, ':', 1) as GT limit 500";
+		
+		String query = "select subject_id, chrom, pos, ref, alt, split_part(file, ':', 1) as GT "
+							    + " from gene.illumina_vcf "
+								+ "where alt like '%,%' and length(split_part(alt,',', 1)) > 1 "
+								+ "or length(split_part(alt,',', 2)) >1 "
+								+ "limit 500";
 
 
 		try {
@@ -201,8 +206,23 @@ public class AlGtComplexRules extends AlGtSimpleRules {
 			System.out.println(e.toString());
 
 		}
-		
+
 		modifyAlleles(subject_id, chrom, pos, ref, alt, GT)
+		String subject_id = null;
+     	String chrom = null;
+	    int pos = 0;
+		String ref = null;
+		String alt = null;
+		String GT = null;
+		while (rs.next()) {
+			subject_id = rs.getString(1);
+			chrom = rs.getString(2);
+			pos = rs.getInt(3);
+			ref = rs.getString(4);
+			alt = rs.getString(5);
+			GT = rs.getString(6);
+ 			modifyAlleles(subject_id, chrom, pos, ref, alt, GT);
+ 					
 	}
 
 
