@@ -36,16 +36,15 @@ public class AlGtComplexRules extends AlGtSimpleRules {
 		super();
 	}
 
-	public void modifyAlleles(String subject_id, String chr, int begin, String ref, String alt, String genotype) {
+	public void modifyAlleles(subject_id, chr, begin, ref, alt, genotype) {
 		 String[] variation = null;
 		 if (alt.contains(",")) {
              variation =  alt.split(",");
-             ComplexObject vcfObject1 = new ComplexObject();
-             ComplexObject vcfObject2 = new ComplexObject();
+             ComplexObject vcfObject1 = new ComplexObject()
+             ComplexObject vcfObject2 = new ComplexObject()
              //Trim both alleles
-      
-             vcfObject1 = vcfTrim(chr, ref, variation[0], begin, subject_id);
-             vcfObject2 = vcfTrim(chr, ref, variation[1], begin, subject_id);
+             vcfObject1 = vcfTrim(chr, ref, variation[0], begin, subject_id)
+             vcfObject2 = vcfTrim(chr, ref, variation[1], begin, subject_id)
              if (genotype.contains("|")) {
             	 	
              }
@@ -54,8 +53,8 @@ public class AlGtComplexRules extends AlGtSimpleRules {
             	 	//if this is deletion compare the refs
             	    if (vcfObject1.getVarType() == "del") {
 	            	 	if (vcfObject1.getRef().length() < vcfObject2.getRef().length()) {
-	            	 		System.out.println(subject_id + "\t" + chr + "\t" + begin + "\t" + ref + "\t" + alt + "\t" + vcfObject1.getVarType() + "\t" +
-	    						  + vcfObject1.getPos() + "\t"+ vcfObject1.getAlt() + "\t" + vcfObject1.getRef() + "\t" +  vcfObject2.getRef() + "\t" + 
+	            	 		System.out.println(subject_id + "\t" + chr + "\t" + pos + "\t" + ref + "\t" + alt + "\t" + vcfObject1.getVarType() + "\t" +
+	    						  + Integer.toString(vcfObject1.getPos()) + "\t"+ vcfObject1.getAlt() + "\t" + vcfObject1.getRef() + "\t" +  vcfObject2.getRef() + "\t" + 
 	            	 				"["  + vcfObject1.getRef() + ","  + vcfObject2.getRef() +  "]\t"+ genotype +"\t");
 	            	 	} else {
 	            	 		if (genotype == "2|1") {
@@ -65,8 +64,8 @@ public class AlGtComplexRules extends AlGtSimpleRules {
 	            	 		} else {
 	            	 			genotype = "1/2";
 	            	 		}
-	            	 		System.out.println(subject_id + "\t" + chr + "\t" + begin + "\t" + ref + "\t" + alt + "\t" + vcfObject1.getVarType() + "\t" +
-	    						  + vcfObject1.getPos() + "\t"+ vcfObject1.getAlt() + "\t" + vcfObject2.getRef() + "\t" +  vcfObject1.getRef() + "\t" + 
+	            	 		System.out.println(subject_id + "\t" + chr + "\t" + pos + "\t" + ref + "\t" + alt + "\t" + vcfObject1.getVarType() + "\t" +
+	    						  + Integer.toString(vcfObject1.getPos()) + "\t"+ vcfObject1.getAlt() + "\t" + vcfObject2.getRef() + "\t" +  vcfObject1.getRef() + "\t" + 
 	            	 				"["  + vcfObject2.getRef() + ","  + vcfObject1.getRef() +  "]\t1/2\t");
 	            	 	}
             	    } 
@@ -80,42 +79,50 @@ public class AlGtComplexRules extends AlGtSimpleRules {
 	            	 		} else {
 	            	 			genotype = "1/X";
 	            	 		}
-	            	 		System.out.println(subject_id + "\t" + chr + "\t" + begin + "\t" + ref + "\t" + alt + "\t" + vcfObject1.getVarType() + "\t" +
-	    						  + vcfObject1.getPos() + "\t"+ vcfObject1.getRef() + "\t" + vcfObject1.getAlt() + "\t" +  vcfObject2.getAlt() + "\t" + 
+	            	 		System.out.println(subject_id + "\t" + chr + "\t" + pos + "\t" + ref + "\t" + alt + "\t" + vcfObject1.getVarType() + "\t" +
+	    						  + Integer.toString(vcfObject1.getPos()) + "\t"+ vcfObject1.getRef() + "\t" + vcfObject1.getAlt() + "\t" +  vcfObject2.getAlt() + "\t" + 
 	            	 				"["  + vcfObject1.getAlt() + ","  + vcfObject2.getAlt() +  "]\t1/X\t");
 	            	 	} else {
-	            	 		System.out.println(subject_id + "\t" + chr + "\t" + begin + "\t" + ref + "\t" + alt + "\t" + vcfObject1.getVarType() + "\t" +
-	    						  + vcfObject1.getPos() + "\t"+ vcfObject1.getRef() + "\t" + vcfObject2.getAlt() + "\t" +  vcfObject1.getAlt() + "\t" + 
+	            	 		System.out.println(subject_id + "\t" + chr + "\t" + pos + "\t" + ref + "\t" + alt + "\t" + vcfObject1.getVarType() + "\t" +
+	    						  + Integer.toString(vcfObject1.getPos()) + "\t"+ vcfObject1.getRef() + "\t" + vcfObject2.getAlt() + "\t" +  vcfObject1.getAlt() + "\t" + 
 	            	 				"["  + vcfObject2.getAlt() + ","  + vcfObject1.getAlt() +  "]\t1/X\t");
 	            	 	}
             	    }
              } 
              //2 separate raws have to be created
              else {
-     	 		if (genotype == "2|1") {
+      	 		if (genotype == "2|1") {
      	 			genotype = "1|X";
      	 		} else if (genotype == "1|2") {
      	 			genotype = "X|1";
      	 		} else {
      	 			genotype = "X/1";
      	 		}
-     	 		System.out.println(subject_id + "\t" + chr + "\t" + begin + "\t" + ref + "\t" + alt + "\t" + vcfObject1.getVarType() + "\t" +
-						  + vcfObject1.getPos() + "\t"+ vcfObject1.getRef() + "\t" + vcfObject1.getAlt() + "\t" +  vcfObject2.getAlt() + "\t" + 
-     	 				"["  + vcfObject1.getAlt() + "]\t1/X\t");
-     	 		System.out.println(subject_id + "\t" + chr + "\t" + begin + "\t" + ref + "\t" + alt + "\t" + vcfObject2.getVarType() + "\t" +
-						  + vcfObject2.getPos() + "\t"+ vcfObject2.getRef() + "\t" + vcfObject1.getAlt() + "\t" +  vcfObject2.getAlt() + "\t" + 
-     	 				"["  + vcfObject2.getAlt() + "]\tX/1\t");
+            	  if (vcfObject1.getVarType() == "del") {
+     	 		System.out.println(subject_id + "\t" + chr + "\t" + pos + "\t" + ref + "\t" + alt + "\t" + vcfObject1.getVarType() + "\t" +
+						  + Integer.toString(vcfObject1.getPos()) + "\t"+ vcfObject1.getRef() + "\t" + vcfObject1.getAlt() + "\t" +  vcfObject2.getAlt() + "\t" + 
+     	 				"["  + vcfObject1.getRef()  "]\t1/X\t");
+     	 		System.out.println(subject_id + "\t" + chr + "\t" + pos + "\t" + ref + "\t" + alt + "\t" + vcfObject2.getVarType() + "\t" +
+						  + Integer.toString(vcfObject2.getPos()) + "\t"+ vcfObject2.getRef() + "\t" + vcfObject1.getAlt() + "\t" +  vcfObject2.getAlt() + "\t" + 
+     	 				"["  + vcfObject2.getRef()  "]\tX/1\t");
              }
+            	  else {
+           	 		System.out.println(subject_id + "\t" + chr + "\t" + pos + "\t" + ref + "\t" + alt + "\t" + vcfObject1.getVarType() + "\t" +
+  						  + Integer.toString(vcfObject1.getPos()) + "\t"+ vcfObject1.getRef() + "\t" + vcfObject1.getAlt() + "\t" +  vcfObject2.getAlt() + "\t" + 
+       	 				"["  + vcfObject1.getAlt()  "]\t1/X\t");
+       	 		    System.out.println(subject_id + "\t" + chr + "\t" + pos + "\t" + ref + "\t" + alt + "\t" + vcfObject2.getVarType() + "\t" +
+  						  + Integer.toString(vcfObject2.getPos()) + "\t"+ vcfObject2.getRef() + "\t" + vcfObject1.getAlt() + "\t" +  vcfObject2.getAlt() + "\t" + 
+       	 				"["  + vcfObject2.getAlt()  "]\tX/1\t");
+            	  }
             	 
          }
 		 
 	}
 	
 	//Method that trims the begin and ends of complex variations
-	public ComplexObject vcfTrim(String chrom, String ref, String var, int begin, String subject_id) {
-
+	public void vcfTrim(String chrom, String ref, String var, String beg, subject_id) {
+		   int begin = Integer.parseInt(beg) - 1;  
 		 //check the tail 
-		   int end=0;
 		   for (int i=1; i < Math.min(var.length(),ref.length()); i++) {
 		       if (var.substring(var.length()-i-1, var.length()-i).equals(ref.substring(ref.length()-i-1,ref.length()-i))) {
 		             end = end+1 ; }            
@@ -128,7 +135,7 @@ public class AlGtComplexRules extends AlGtSimpleRules {
 		    	 	ref = ref.substring(0, ref.length() - end);
 		    	 	var = var.substring(0, var.length() - end);
 		     } 
-
+		     int end = 0;
 		     String varType = null;
 		     
 		     int  start = 0;
@@ -166,7 +173,7 @@ public class AlGtComplexRules extends AlGtSimpleRules {
 		        varType = "sub";
 		        
 		    }      
-		    ComplexObject vcfObject = new ComplexObject(chrom, begin, ref, var, varType, subject_id);
+		    ComplexObject vcfObject = new ComplexObject(chrom, Integer.toString(begin), ref, var, varType, indiv);
 		    return vcfObject;
 }
 	
@@ -182,11 +189,7 @@ public class AlGtComplexRules extends AlGtSimpleRules {
 
 		}
         
-		String query = "select subject_id, chrom, pos, ref, alt, split_part(file, ':', 1) as GT "
-				+ " from gene.illumina_vcf "
-				+ "where alt like '%,%' and length(split_part(alt,',', 1)) > 1 "
-				+ "or length(split_part(alt,',', 2)) >1 "
-				+ "limit 500";
+		String query = "select subject_id, chrom, pos, ref, alt, split_part(file, ':', 1) as GT limit 500";
 
 
 		try {
@@ -199,23 +202,7 @@ public class AlGtComplexRules extends AlGtSimpleRules {
 
 		}
 		
-		String subject_id = null;
-		String chrom = null;
-		int pos = 0;
-		String ref = null;
-		String alt = null;
-		String GT = null;
-		while (rs.next()) {
-			subject_id = rs.getString(1);
-			chrom = rs.getString(2);
-			pos = rs.getInt(3);
-			ref = rs.getString(4);
-			alt = rs.getString(5);
-			GT = rs.getString(6);
-			modifyAlleles(subject_id, chrom, pos, ref, alt, GT);
-					
-		}
-		
+		modifyAlleles(subject_id, chrom, pos, ref, alt, GT)
 	}
 
 
