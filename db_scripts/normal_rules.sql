@@ -94,4 +94,36 @@ order by chrom, mod_start_pos, mod_end_pos, length(mod_alt), mod_alt limit 5000
 
 select chrom, pos, ref, alt, info from gene.illumina_vcf limit 5000
 
+select * from locks;
+
+select count(*) from gene.illumina_vcf  //769837125 
+select count(*) from 
+gene.illumina_vcf 
+where alt like '%,%' and length(split_part(mod_alt, ',', 1)) > 1
+
+select 968122/769837125 
+
+
+select 1202256/769837125
+
+select chrom, pos, ref, alt, split_part(file, ':', 1) as GT 
+				from gene.illumina_vcf where alt like '%,%' 
+				and length(split_part(alt,',', 1)) > 1 or length(split_part(alt,',', 2)) > 1 
+				order by 1, 2, 4 
+				limit 5000;
+
+
+select * from gene.illumina where 
+
+select subject_id, chrom, pos, ref, split_part(alt, ',', 1) as allele1,  
+split_part(alt, ',', 2) as allele2,
+TypeRules(ref,split_part(alt, ',', 1)) as vartype1, 
+TypeRules(ref,split_part(alt, ',', 2)) as vartype2, 
+id, qual, filter, info, format, file
+from gene.illumina_vcf where  alt like '%,%' 
+and length(split_part(alt,',', 1)) > 1 or length(split_part(alt,',', 2)) > 1 
+			
+				limit 5000;
+
+
 
